@@ -21,4 +21,7 @@ function logoCanvas() {
 
 $(document).ready(function() {
   logoCanvas();
+  $('#datetimepicker1').datetimepicker({
+    language: 'en'
+  });
 });

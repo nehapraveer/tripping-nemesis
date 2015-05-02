@@ -1,9 +1,16 @@
+<?php
+$product = new product();
+$products = $product->listProducts();
+shuffle($products);
+$row_counter = 0;
+?>
+
 <div class="inner cover">
-            <h1 class="cover-heading">Cover your page.</h1>
-            <p class="lead">Cover is a one-page template for building 
-simple and beautiful home pages. Download, edit the text, and add your 
-own fullscreen background photo to make it your own.</p>
-            <p class="lead">
-              <a href="#" class="btn btn-lg btn-default">Learn more</a>
-            </p>
-          </div>
+  <?php foreach ($products as $product) { ?>
+      <a class="col-xs-12 col-sm-3 col-md-3 list-product" 
+         href="?q=productdetail&product_id=<?php echo $product->product_id ?>">
+        <image src="<?php echo $product->image_url;  ?>" class="list-image"/>
+        <div class="row"><?php echo $product->product_name; ?></div>
+      </a>
+  <?php } ?>
+</div>
