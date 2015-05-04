@@ -12,4 +12,11 @@ class Common {
     }
     return '';
   }
+  
+  public static function get_post_val($name) {
+    if (isset($_POST[$name])) {
+      return $_POST[$name];
+    }
+    return '';
+  }
 }

@@ -1,11 +1,12 @@
 <?php
 define ('PROJECT_ROOT', getcwd());
 //init
-require_once "main.php";
 require_once PROJECT_ROOT . '/classes/util/common.php';
 require_once PROJECT_ROOT . '/classes/db/mysql.php';
 require_once PROJECT_ROOT . '/classes/db/Customer.php';
 require_once PROJECT_ROOT . '/classes/db/product.php';
+require_once PROJECT_ROOT . '/classes/db/order.php';
+require_once "main.php";
 ob_start();
 session_start();
 ?>
@@ -24,6 +25,7 @@ session_start();
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="css/cover.css" rel="stylesheet">
@@ -53,7 +55,19 @@ session_start();
             ?>
           </div>
 
-          
+          <div class="footer">
+            <div class="row">
+              <div class="col-xs-12 col-md-12 col-sm-12 footer-menu">
+                <a class="col-xs-2 col-md-2 col-sm-2 col-xs-offset-2 col-md-offset-2 col-sm-offset-2" href="?q=jobs">Careers</a>
+                <a class="col-xs-2 col-md-2 col-sm-2" href="?q=blog">Blogs</a>
+                <a class="col-xs-2 col-md-2 col-sm-2" href="?q=contact">Contact Us</a>
+                <a class="col-xs-2 col-md-2 col-sm-2 last" href="?q=faq">FAQ</a>
+              </div>
+              <div class="col-xs-12 col-md-12 col-sm-12 footer-text">
+                Women's Era 2015. All rights reserved.
+              </div>
+            </div>
+          </div>
 
         </div>
 

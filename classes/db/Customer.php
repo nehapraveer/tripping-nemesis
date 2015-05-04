@@ -107,8 +107,16 @@ class Customer {
     $this->zip = $zip;
   }
   
+  function setCustomerID($customer_id) {
+    $this->customer_id = $customer_id;
+  }
+  
+  function getCustomerID() {
+    return $this->customer_id;
+  }
+  
   public static function factoryByProperty($user, $pass, $email='', $fname='', $lname='', $sex='', 
-          $dob='', $phone='', $address='', $city='', $state='', $zip='') {
+          $dob='', $phone='', $address='', $city='', $state='', $zip='', $customer_id) {
     $cust = new Customer();
     $cust->setUser($user);
     $cust->setPass($pass);
@@ -122,6 +130,7 @@ class Customer {
     $cust->setCity($city);
     $cust->setState($state);
     $cust->setZip($zip);
+    $cust->setCustomerID($customer_id);
     return $cust;
   }
 
@@ -202,9 +211,9 @@ class Customer {
             $row->address_1, 
             $row->city, 
             $row->state, 
-            $row->zip);
+            $row->zip,
+            $row->customer_id);
     $cust->setStatus(LOGIN_SUCCESS);
     return $cust;
   }
 }
-

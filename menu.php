@@ -17,11 +17,19 @@ function activeClass($page) {
             </canvas>
             <h3 class="masthead-brand">Women's Era</h3>
         </span>
+      <div class="welcome-text">
       <?php $cust = Customer::getCustomer(); 
         if ($cust !== FALSE): ?>
-        <div class="welcome-text">Welcome <?php echo ucfirst($cust->getFname());?>!
-        </div>
+        <span class="menu-user">Welcome <?php echo ucfirst($cust->getFname());?>!</span>
+      <?php endif;
+        $cart_items = Order::getCartItems();
+        $count_items = count(Order::getCartItems());
+        if ($count_items > 0 && get_page_name() != 'checkout' && get_page_name() != 'orderconfirm'):
+      ?>
+        <span class="cart-top"><a href="?q=checkout">
+            <i class="glyphicon glyphicon-shopping-cart"></i> <?php echo $count_items;?> item(s)</a></span>
       <?php endif; ?>
+      </div>
       <nav class="masthead-nav">
         <ul class="nav masthead-nav">
           <li class="<?php print activeClass('home'); ?>"><a href="./?q=home">Home</a></li>

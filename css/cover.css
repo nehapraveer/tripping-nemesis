@@ -82,7 +82,8 @@ body {
 }
 
 .main-container {
-  margin: 0 0 100px;
+  margin: 0 0 50px;
+
 }
 
 /*
@@ -142,7 +143,8 @@ nav {
 .masthead-nav > li > a:hover,
 .masthead-nav > li > a:focus {
   background-color: transparent;
-  border-bottom-color: #a9a9a9;
+  color: #c70361;
+  border-bottom-color: #c70361;
 }
 .masthead-nav > .active > a,
 .masthead-nav > .active > a:hover,
@@ -169,6 +171,19 @@ nav {
   margin: -6px 0 -6px;
 }
 
+.welcome-text {
+  float: right;
+  margin: -6px 0 -6px;
+}
+
+.welcome-text .menu-user {
+  padding: 0 5px 0;
+}
+
+.welcome-text .cart-top a {
+  color: #C70361;
+  font-weight: bold;
+}
 
 /*
  * Footer
@@ -264,5 +279,248 @@ nav {
 .product-size {
   clear: left;
   font-size: 18px;
+  margin: 0;
+  padding: 0;
+  //border: 1px #CCC solid;
+}
+
+.list-product img {
+  height: 266px;
+  overflow: hidden;
+  border: 1px #CCC solid;
+}
+
+.list-product:hover {
+  text-decoration: none;
+}
+
+.list-product:hover img {
+  //margin: 0 -2px 0;
+  //border: 4px #B65B80 solid;
+}
+
+.list-product {
+  padding: 0;
+}
+
+.list-product:hover .product-name {
+  color: #923158;
+  font-weight: bold;
+}
+
+.list-product .product-name {
+  box-shadow: 0 16px 24px -16px #B65B80 inset;
+  padding: 8px;
+  height: 80px;
+}
+
+.list-image {
+  height: 500px;
+}
+
+.product-desc ul {
+  margin: 0;
+  padding: 0;
+}
+
+.product-desc .product-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #C70361;
+  margin: 0 0 6px;
+}
+
+.product-desc li {
+  float: left;
+  text-align: left;
+  clear: left;
+  padding: 0 0 5px;
+}
+
+.product-desc .shortDesc {
+  list-style: none;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+#shipEligibilityBullet {
+  font-size: 11px;
+  list-style-type: none;
+}
+
+.product-size {
+  clear: left;
   margin: 0 0 8px;
+}
+
+.quantity-text {
+  margin: 20px 0 4px;
+  font-size: 22px;
+}
+
+.product-price {
+  margin: 0 0 20px;
+  color: #006dcc;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.checkout {
+  margin: 40px 0 0;
+}
+
+.checkout .checkout-img-container {
+  margin: 0;
+  padding: 0;
+}
+
+.checkout .checkout-img {
+  height: 60px;
+  overflow: hidden;
+}
+
+.checkout .cart-item,.order-confirm .cart-item {
+  margin: 10px 0 10px 0;
+  padding: 0 0 10px;
+  border-bottom: 1px #6D1237 dotted;
+}
+
+.checkout .price {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0;
+}
+
+.checkout .remove {
+  margin: 6px 0 0;
+  padding: 0;
+  font-size: 10px;
+}
+
+.checkout .remove a:hover {
+  text-decoration: none;
+}
+
+.checkout .total {
+  font-size: 22px;
+}
+
+.checkout .total .price {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.order .order-input {
+  margin: 4px 0;
+  padding: 0 2px;
+}
+
+.order .order-text {
+  margin: 8px 0 0;
+  padding: 0 2px;
+  text-align: left;
+}
+
+.order-confirm .order-detail {
+  margin: 26px 0 0;
+}
+
+.order .text-success {
+  margin: 10px 0;
+}
+
+.order-detail .address {
+  margin: 34px 0 0;
+  
+}
+
+.order-detail .order-total {
+  margin: 26px 0 0;
+  font-size: 22px;
+}
+
+.home-wrapper {
+  margin: 40px 0 0;
+}
+
+.home-wrapper .item {
+  padding: 20px;
+}
+
+.no-pad {
+  padding: 0;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.footer {
+  
+}
+
+.footer-text {
+  font-size: 12px;
+  margin: 10px 0 0;
+}
+
+.footer-menu a {
+  color: #B65B80;
+  font-weight: bold;
+  border-right: 1px #B65B80 solid;
+}
+
+.footer-menu a.last {
+  border: none;
+}
+
+.job-list {
+  margin: 20px 0 0;
+}
+
+.job-list thead tr {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.job-description {
+  float: left;
+  text-align: left;
+  line-height: 1.2em;
+  margin-top: 20px;
+}
+
+.job-text {
+  float: left;
+  font-family:"WalkwayB";
+  font-size: 14px;
+  clear: left;
+}
+
+.job-apply {
+  clear: left;
+  margin: 6px 0 0;
+}
+
+.job-apply a {
+  font-size: 18px;
+}
+
+.job-applicant {
+  text-align: left;
+}
+
+.job-row {
+  margin: 8px 0 0 0;
+  padding: 0;
+}
+
+.sex-row {
+  clear: left;
+  margin: 0;
+  padding: 16px 0;
+}
+
+.job-submit {
+  font-size: 18px;
 }
