@@ -169,11 +169,7 @@ nav {
 .welcome-text {
   float: right;
   margin: -6px 0 -6px;
-}
-
-.welcome-text {
-  float: right;
-  margin: -6px 0 -6px;
+  padding: 0 2px;
 }
 
 .welcome-text .menu-user {
@@ -527,4 +523,46 @@ nav {
 
 .blog-row {
   margin: 20px;
+}
+
+.blog-section {
+  border: 1px #923158 solid;
+  margin: 20px 0;
+  padding: 0;
+  text-align: left;
+}
+
+.blog-section h4 {
+  background: #EDDBE3;
+  border-top: 1px #923158 solid;
+  border-radius: 5px 5px 0 0;
+  margin: 0;
+  padding: 10px;
+  font-size: 32px;
+  font-style: italic;
+}
+
+.blog-content {
+  padding: 10px;
+  font-size: 18px;
+}
+
+.blog-author {
+  padding: 5px 10px;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: bold;
+  background: #efefef;
+  border-bottom: 1px #923158 solid;
+  border-radius: 0 0 5px 5px;
+}
+
+.blog-author-name {
+  float: left;
+  width: 50%;
+}
+
+.blog-date {
+  text-align: right;
+  font-weight: normal;
 }

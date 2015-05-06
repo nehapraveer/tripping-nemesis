@@ -35,7 +35,7 @@ function activeClass($page) {
           <li class="<?php print activeClass('home'); ?>"><a href="./?q=home">Home</a></li>
           <li class="<?php print activeClass('about'); ?>"><a href="./?q=about">About</a></li>
           <li class="<?php print activeClass('contact'); ?>"><a href="./?q=contact">Contact</a></li>
-          <li class="<?php print activeClass('whatsnew'); ?>"><a href="./?q=whatsnew">What's New</a></li>
+          <li class="<?php print activeClass('postblog'); ?>"><a href="./?q=bloglist">Blog</a></li>
           <li class="<?php print activeClass('faq'); ?>"><a href="./?q=faq">FAQ</a></li>
           <?php if ($cust === FALSE): ?>
             <li class="<?php print activeClass('login'); ?>"><a href="./?q=login">Login</a></li>
