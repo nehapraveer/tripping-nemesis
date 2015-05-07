@@ -1,8 +1,13 @@
 <?php
 $login_err=FALSE;
+$redir = isset($_GET['redir']) ? $_GET['redir'] : '';
 if (isset($_GET['action']) && $_GET['action'] == 'logout') {
   if (!empty(session_id())) {
     session_destroy();
+    Order::clearCart();
+    ob_end_clean();
+    header('Location: ?q=login');
+    exit();
   }
 }
 if (isset($_GET['action']) && $_GET['action'] == 'login') {
@@ -17,12 +22,17 @@ if (isset($_GET['action']) && $_GET['action'] == 'login') {
       session_start();
     }
     $_SESSION['customer'] = $cust;
+    if (!empty($_GET['redir'])) {
+      ob_end_clean();
+      header('Location: ?q='. $_GET['redir']);
+      exit();
+    }
     header('Location: index.php');
     exit();
   }
 }
 ?>
-<form action="?q=login&action=login" method="post" class="loginform well">
+<form action="?q=login&action=login&redir=<?php echo $redir;?>" method="post" class="loginform well">
   <div class="row">
     <div class="input-group">
       <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>

@@ -1,23 +1,12 @@
 <?php
+  $cart_items = Order::getCartItems();
+  $total_price = 0;
   $cust = Customer::getCustomer();
   if ($cust == FALSE) {
     ob_end_clean();
     header('Location: ?q=login&redir=checkout');
     exit();
   }
-  else if (isset($_POST['cartsubmit'])) {
-    Order::addToCart(Common::get_post_val('product_id'), 
-            Common::get_post_val('quantity'), 
-            Common::get_post_val('size'), 
-            Common::get_post_val('image_url'), 
-            Common::get_post_val('product_name'), 
-            Common::get_post_val('product_price'));
-  }
-  else if (isset($_GET['remove_id'])) {
-    Order::removeFromCart($_GET['remove_id']);
-  }
-  $cart_items = Order::getCartItems();
-  $total_price = 0;
   if (empty($cart_items)) {
     ob_end_clean();
     header('Location: ?q=home');

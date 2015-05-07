@@ -11,7 +11,7 @@
                 <abbr>P:</abbr> +1(859)494-6316
            </address>
           </div>
-        <div id="map-container" class="col-md-8">
+        <div id="container" class="col-md-8">
           <script src="js\map.js"></script>
         </div>
       </div><!-- /map-outer -->
